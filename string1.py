@@ -69,8 +69,10 @@ def fix_start(s):
 #   'dog', 'dinner' -> 'dig donner'
 # Assume a and b are length 2 or more.
 def mix_up(a, b):
-  # +++your code here+++
-  return
+  if len(a) < 2: raise AssertionError()
+  if len(b) < 2: raise AssertionError()
+  
+  return b[0:2]+a[2:]+' '+a[0:2]+b[2:]
 
 
 # Provided simple test() function used in main() to print
@@ -80,6 +82,7 @@ def test(got, expected):
     prefix = ' OK '
   else:
     prefix = '  X '
+	
   print('%s got: %s expected: %s' % (prefix, reprlib.repr(got), reprlib.repr(expected)))
 
 
