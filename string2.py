@@ -35,8 +35,8 @@ def verbing(s):
 # So 'This dinner is not that bad!' yields:
 # This dinner is good!
 def not_bad(s):
-  index_not = str.find('not')
-  index_bad = str.find('bad')
+  index_not = s.find('not')
+  index_bad = s.find('bad')
 
   if (index_not) == -1:
     print('not not found')
@@ -46,10 +46,12 @@ def not_bad(s):
     print('bad not found')
     return s
 
-  #if (index_bad > index_not):
-    #answer = replace(
+  if (index_bad > index_not):
+    tup = s.partition('not')
+    answer = tup[0] + 'good'
+    return answer
     
-  return
+  return s
 
 
 # F. front_back
@@ -60,7 +62,7 @@ def not_bad(s):
 # Given 2 strings, a and b, return a string of the form
 #  a-front + b-front + a-back + b-back
 def front_back(a, b):
-  # +++your code here+++
+  #
   return
 
 
